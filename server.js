@@ -19,7 +19,7 @@ var middlware = {
 app.use(middlware.logger);
 
 app.get('/about', middlware.requireAithentication, function (req, res){
-	res.send('About Us');
+	res.send('About Us!');
 });
 
 app.use(express.static(__dirname + '/public'));
