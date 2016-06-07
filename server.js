@@ -5,16 +5,7 @@ var PORT = 3000;
 // 	res.send('Hello Express!');
 // });
 
-var middlware = {
-	requireAithentication: function (req, res, next) {
-		console.log('private route hit');
-		next();
-	},
-	logger: function (req, res, next) {
-		console.log('Request: '+ new Date().toString()+" "+req.method + ' '+req.originalUrl);
-		next();
-	}
-};
+var middlware = require('./middleware.js');
 
 app.use(middlware.logger);
 
